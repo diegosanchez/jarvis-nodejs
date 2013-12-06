@@ -5,7 +5,8 @@
   "devDependencies": {
     "mocha": "*",
     "should": "*",
-    "colors": "*"
+    "colors": "*",
+    "jsmocktool": "*"
   },
   "dependencies": {
   }

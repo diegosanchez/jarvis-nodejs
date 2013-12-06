@@ -1,11 +1,11 @@
 TESTS = test/*.js
-REPORTER = dot
+REPORTER=spec
 
 test:
 	@./node_modules/.bin/mocha \
                 --require should \
                 --require test/common.js \
-                --reporter $(REPORTER) \
+                --reporter ${REPORTER} \
                 --growl \
                 $(TESTS)
 
