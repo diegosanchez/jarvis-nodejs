@@ -19,4 +19,21 @@ describe('Task', function() {
       mock(task).verify_all();
     });
   })
+
+  describe("construction", function() {
+    describe("jobs specified", function() {
+      beforeEach( function() {
+        var job = { run: function() {} };
+        task = new Task( [ job, job ] );
+      });
+
+      it( "should invoke progress twice", function() { 
+        mock(task).should_receive( "onProgress" ).with_param(1,2);
+        mock(task).should_receive( "onProgress" ).with_param(2,2);
+        task.run();
+        mock(task).verify_all();
+      });
+
+    });
+  });
 })
