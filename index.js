@@ -1,10 +1,8 @@
-var Task = require("./lib/task.js").Task;
+var SOJob = require("./lib/sojob.js").SOJob;
 
-var job = { run: function() {} };
+var job = new SOJob("mkdir -p ~/tmp/tele");
 
-var t0 = new Task();
-var t1 = new Task( [ job, job ] );
+job.onSucceed = function() { console.log( "succeesful" ); }
+job.onFailed = function() { console.log( "failed" ); }
+job.execute();
 
-
-t0.run();
-t1.run();
