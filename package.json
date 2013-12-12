@@ -6,7 +6,7 @@
     "mocha": "*",
     "should": "*",
     "colors": "*",
-    "jsmocktool": "*"
+    "sinon":"*"
   },
   "dependencies": {
   }

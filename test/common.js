@@ -1,4 +1,3 @@
 should = require("should");
-mock = require('jsmocktool').mock;
-
+mock = require("sinon").mock;
 
